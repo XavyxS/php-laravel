@@ -8,8 +8,6 @@
 </head>
 <link rel="stylesheet" href="css/styles.css">
 
-
-
 <body>
 @include('header')
 
