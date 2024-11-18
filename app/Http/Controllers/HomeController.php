@@ -12,6 +12,12 @@ class HomeController extends Controller
 {
   public function index()
   {
+
+    return view('welcome');
+
+
+
+    
     // Verificar si existe la cookie 'user_id'
     $userId = Cookie::get('user_id');
 
