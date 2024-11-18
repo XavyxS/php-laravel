@@ -8,7 +8,6 @@ class UserController extends Controller
 {
     public function mensaje()
     {
-        // Lógica de negocio
         return view('mensaje');
     }
 

@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Session;
+
 
 class AuthController extends Controller
 {
@@ -52,7 +56,9 @@ class AuthController extends Controller
 
       // Si todo es correcto, puedes iniciar sesión al usuario
       // Aquí puedes manejar el inicio de sesión, por ejemplo, usando Auth
-      auth()->login($user);
+      Auth::login($user);
+
+      $cookie = cookie('user_id', $user->id, 43200); // 43200 minutos = 30 días
 
       // Guardar el nombre del usuario en la sesión
       session(['name' => $user->name]);
@@ -116,5 +122,20 @@ class AuthController extends Controller
         ->withInput() // Esto preserva los valores de los campos en el formulario
         ->with('errores', $validationErrors);
     }
+  }
+
+  public function logout()
+  {
+    // Cerrar la sesión del usuario
+    Auth::logout();
+
+    // Limpiar toda la sesión
+    Session::flush();
+
+    // Borrar la cookie 'user_id'
+    $cookie = Cookie::forget('user_id');
+
+    // Redirigir al usuario a la página de inicio con la cookie borrada
+    return redirect('/')->withCookie($cookie);
   }
 }

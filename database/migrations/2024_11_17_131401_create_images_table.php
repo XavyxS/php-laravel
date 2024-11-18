@@ -14,7 +14,7 @@ return new class extends Migration
     Schema::create('images', function (Blueprint $table) {
       $table->id(); // id (Primary Key)
       $table->string('user_id'); // user_id (Foreign Key)
-      $table->string('image_id', 50)->unique(); // image_id (Unique Constraint)
+      $table->string('image_id', 50); // image_id (Unique Constraint)
       $table->string('url', 255); // url
       $table->string('filename', 100); // filename
       $table->string('url_thumb', 255)->nullable(); // url_thumb
