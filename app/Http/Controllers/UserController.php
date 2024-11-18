@@ -11,4 +11,9 @@ class UserController extends Controller
         // Lógica de negocio
         return view('mensaje');
     }
+
+    public function dashboard()
+    {
+        return view('dashboard');
+    }
 }

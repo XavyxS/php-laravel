@@ -15,10 +15,10 @@
     <div class="conteiner">
       <h2>Registro de Usuario</h2>
       @if(session('errores'))
-      <ul>
+      <ul class="err_msgs">
         @foreach(session('errores') as $campo => $mensajes)
         @foreach($mensajes as $mensaje)
-        <li>{{ $mensaje }}</li>
+        <li class="err_msg">{{ $mensaje }}</li>
         @endforeach
         @endforeach
       </ul>
