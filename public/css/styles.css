@@ -21,13 +21,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+
 }
 
 header {
   background-color: rgba(247, 248, 249, 1);
   padding: .4rem 0 0;
-  
+
 }
 
 .menu {
@@ -68,7 +68,7 @@ header li.menu-item a {
 }
 
 header li.menu-item a:hover {
-  background-color: rgb(0, 40, 189);
+  background-color: #3C3C3C;
   color: rgb(255, 255, 255);
 }
 
@@ -81,7 +81,11 @@ header li.menu-item a:hover {
   height: auto;
 }
 
-.hero,
+.hero {
+  text-align: center;
+  flex-grow: 1;
+}
+
 main {
   padding-top: 30px;
   text-align: center;
@@ -91,6 +95,7 @@ main {
 .hero h1 {
   font-size: 2.5rem;
   font-weight: 500;
+  margin-bottom: -35px;
 }
 
 .hero h2 {
@@ -109,6 +114,12 @@ main {
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.presentacion {
+  padding-top: 10px;
+  margin: auto;
+  max-width: 65%;
 }
 
 .formulario {
@@ -257,3 +268,10 @@ footer .copyrights {
   margin-bottom: 10px;
 }
 
+.recursos {
+  width: auto;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 0 180px;
+}
