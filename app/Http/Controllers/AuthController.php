@@ -64,7 +64,7 @@ class AuthController extends Controller
       session(['name' => $user->name]);
 
       // Redirigir al usuario a la página deseada
-      return redirect('/dashboard'); // Cambia 'dashboard' por la ruta que desees
+      return redirect('/dashboard')->withCookie($cookie); // Cambia 'dashboard' por la ruta que desees
 
 
     } catch (ValidationException $e) {

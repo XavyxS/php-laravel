@@ -6,10 +6,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ImageController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
+Route::get('/', [HomeController::class, 'index']);
 Route::get('/index', [HomeController::class, 'index']);
 Route::get('/loginForm', [AuthController::class, 'loginForm']);
 Route::post('/login', [AuthController::class, 'loginusr']);
