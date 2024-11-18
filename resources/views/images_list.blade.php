@@ -9,20 +9,6 @@
 
 </head>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-
-    document.getElementById('image').addEventListener('change', function() {
-      var archivo = this.files[0];
-      var fileNameSpan = document.getElementById('file_name');
-      if (archivo) {
-        fileNameSpan.textContent = "Archivo seleccionado: " + archivo.name;
-      } else {
-        fileNameSpan.textContent = "Ningún archivo seleccionado";
-      }
-    })
-  });
-</script>
 
 <body>
   @include('header')
@@ -59,7 +45,7 @@
           @csrf
           <label class="stboton" for="image">Seleccionar Archivo</label><br><br>
           <input class="stboton" type="file" name="image" id="image" hidden>
-          <span class="nombre_archivo" id="file_name">Ningún archivo seleccionado</span><br>
+          <span class="nombre_archivo" id="file_name"><strong>Ningún archivo seleccionado</strong></span><br>
           <button class="stboton" name="enviar">Enviar</button>
         </form>
       </div>
@@ -75,5 +61,20 @@
   @include('footer')
 
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    document.getElementById('image').addEventListener('change', function() {
+      var archivo = this.files[0];
+      var fileNameSpan = document.getElementById('file_name');
+      if (archivo) {
+        fileNameSpan.textContent = "Archivo seleccionado: " + archivo.name;
+      } else {
+        fileNameSpan.textContent = "Ningún archivo seleccionado";
+      }
+    })
+  });
+</script>
+
 
 </html>
