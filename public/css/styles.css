@@ -26,12 +26,12 @@ body {
 
 header {
   background-color: rgba(247, 248, 249, 1);
-  padding: .4rem 0 0;
+  /* padding: .4rem 0 0; */
 
 }
 
 .menu {
-  padding: .4rem 2rem;
+  padding: 0 2rem;
 }
 
 header ul {
@@ -63,7 +63,7 @@ header li.menu-item a {
   margin: 5px 0;
   height: 38px;
   line-height: 36px;
-  padding: .4rem .65rem;
+  padding: 0 .65rem;
   text-align: center;
 }
 
@@ -87,7 +87,7 @@ header li.menu-item a:hover {
 }
 
 main {
-  padding-top: 30px;
+  padding-top: 20px;
   text-align: center;
   flex-grow: 1;
 }
@@ -108,6 +108,7 @@ main {
   flex-direction: column;
   justify-content: center;
   margin: auto;
+  margin-top: 30px;
   max-width: 600px;
   min-height: 300px;
   background-color: #dcdcdc;
