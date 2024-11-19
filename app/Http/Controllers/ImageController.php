@@ -45,16 +45,17 @@ class ImageController extends Controller
       $apiKey = env('API_KEY_IMGBB');
 
       // Hacer la solicitud POST a ImgBB usando Http Facade sin verificar SSL
+      // REsulta que es más sencillo usar Facade que Curl. Ya aprenderé mas sobre Facade.
       $response = Http::withOptions([
-        'verify' => true, // Deshabilitar la verificación SSL En Dedsarrollo hay cambiar a FALSE
+        'verify' => true, // En Producción debe ser 'true' y en desarrollo 'false'
       ])->asForm()->post($url, [
         'key' => $apiKey,
         'image' => $imageData,
       ]);
 
-      // Procesar la respuesta
+      // Procesar la respuesta de ImgBB
       if ($response->successful() && $response['success']) {
-        // Extraer datos de la imagen
+        // Extraer datos de la imagen. La API de ImgBB nos devuelve un json con los datos de la imagen.
         $imageId = $response['data']['id'];
         $imageUrl = $response['data']['url'];
         $urlThumb = $response['data']['thumb']['url'] ?? null;
