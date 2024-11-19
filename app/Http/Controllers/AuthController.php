@@ -54,8 +54,7 @@ class AuthController extends Controller
         ]);
       }
 
-      // Si todo es correcto, puedes iniciar sesión al usuario
-      // Aquí puedes manejar el inicio de sesión, por ejemplo, usando Auth
+      // Si todo es correcto, iniciamos Sesión
       Auth::login($user);
 
       $cookie = cookie('user_id', $user->id, 43200); // 43200 minutos = 30 días
@@ -64,7 +63,7 @@ class AuthController extends Controller
       session(['name' => $user->name]);
 
       // Redirigir al usuario a la página deseada
-      return redirect('/dashboard')->withCookie($cookie); // Cambia 'dashboard' por la ruta que desees
+      return redirect('/dashboard')->withCookie($cookie); 
 
 
     } catch (ValidationException $e) {
@@ -109,7 +108,7 @@ class AuthController extends Controller
       $user = User::create([
         'name' => $name,
         'email' => $email,
-        'password' => $password, // Se hashea automáticamente
+        'password' => $password, // Se hashea automáticamente. Se configuró en Models
       ]);
 
       // Redirigir al usuario con un mensaje de éxito

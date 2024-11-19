@@ -46,7 +46,7 @@ class ImageController extends Controller
 
       // Hacer la solicitud POST a ImgBB usando Http Facade sin verificar SSL
       $response = Http::withOptions([
-        'verify' => true, // Deshabilitar la verificación SSL
+        'verify' => true, // Deshabilitar la verificación SSL En Dedsarrollo hay cambiar a FALSE
       ])->asForm()->post($url, [
         'key' => $apiKey,
         'image' => $imageData,
