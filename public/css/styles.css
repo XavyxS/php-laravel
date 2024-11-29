@@ -13,7 +13,7 @@ body {
 
 .logo-js {
   font-size: 1.5rem;
-  float: left;
+  /* float: left; */
   padding: .4rem .5rem;
 }
 
@@ -275,4 +275,10 @@ footer .copyrights {
   display: grid;
   grid-template-columns: 50% 50%;
   padding: 0 180px;
+}
+
+@media (max-width: 768px) {
+  .recursos {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+  }
 }
