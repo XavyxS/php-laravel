@@ -39,9 +39,9 @@ class ImageController extends Controller
     // Validar que la imagen sea válida
     if ($image && $image->isValid()) {
 
-      // Verificar si el tamaño de la imagen es mayor a 32MB (32MB = 32 * 1024 * 1024 = 33554432 bytes)
-      if ($image->getSize() > 33554432) {
-        return redirect()->back()->with('error', 'La imagen excede el tamaño máximo permitido de 32MB.');
+      // Verificar si el tamaño de la imagen es mayor a 20MB (20MB = 32 * 1024 * 1024 = 33554432 bytes)
+      if ($image->getSize() > 20971520) {
+        return redirect()->back()->with('error', 'La imagen excede el tamaño máximo permitido de 20MB.');
       }
 
       $filename = $image->getClientOriginalName(); // Nombre original del archivo
