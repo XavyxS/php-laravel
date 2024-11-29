@@ -23,6 +23,7 @@ class ImageController extends Controller
     return view('images_list', ['images' => $images]);
   }
 
+
   public function upload_img(Request $request)
   {
     // Obtener el ID del usuario autenticado
@@ -37,6 +38,12 @@ class ImageController extends Controller
 
     // Validar que la imagen sea válida
     if ($image && $image->isValid()) {
+
+      // Verificar si el tamaño de la imagen es mayor a 32MB (32MB = 32 * 1024 * 1024 = 33554432 bytes)
+      if ($image->getSize() > 33554432) {
+        return redirect()->back()->with('error', 'La imagen excede el tamaño máximo permitido de 32MB.');
+      }
+
       $filename = $image->getClientOriginalName(); // Nombre original del archivo
       $imageData = base64_encode(file_get_contents($image->getPathname())); // Imagen codificada en base64
 
