@@ -14,6 +14,7 @@
   <main>
     <div class="conteiner">
       <h2>Inicio de Sesión</h2>
+
       @if(session('errores'))
       <ul class="err_msgs">
         @foreach(session('errores') as $campo => $mensajes)
@@ -23,6 +24,7 @@
         @endforeach
       </ul>
       @endif
+      
       <form class="formulario" action="/login" method="POST" novalidate>
         @csrf
         <label for="email">Correo:</label>

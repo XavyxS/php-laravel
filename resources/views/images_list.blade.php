@@ -15,6 +15,17 @@
   <main>
     <div class="conteiner">
       <h2>Banco de Imágenes</h2>
+      
+      @if(session('errores'))
+      <ul class="err_msgs">
+        @foreach(session('errores') as $campo => $mensajes)
+        @foreach($mensajes as $mensaje)
+        <li class="err_msg">{{ $mensaje }}</li>
+        @endforeach
+        @endforeach
+      </ul>
+      @endif
+
       @if($images->isEmpty())
       <h3> No hay imágenes para mostrar.</h3>
       @else
