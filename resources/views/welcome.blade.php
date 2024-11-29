@@ -19,25 +19,21 @@
       <div class="presentacion">
         <P>Esta aplicación es la Actividad Final de la materia <strong>Lenguage de Programación Backend</strong>
           del Tercer Semestre de la Carrera: <strong>Desarrollo de Sistemas Web. </strong>
-          <!-- Esta App es el resultado
-          de lo aprendido usando al Lenguage de Programación <strong>PHP. </strong> En esta aplicación usamos los conceptos aprendidos
-          como lo son: Configuración de Servidores PHP, Comunicación Cliente-Servidor, Formularios, Envío de Archivos en Formularios,
-          Manejo de Sesiones y Cookies, Bases de Datos, la arquitectura MVC y por último los Frameworks Codelgniter y Laraval. -->
           <br><br>
           Esta aplicación es un <strong> Banco de Imágenes individuales</strong> para cada usuario. La App pide el registro
           del Usuario para poder Iniciar Sesión. La App revisa que todos los campos del Registro sen válidos y que el Usuario no se encuentre
-          ya registrado. Una vez registrado el Usuario, podrá Iniciar Sesión y acceder a su Banco  de Imágenes donde podrá subir
+          ya registrado. Una vez registrado el Usuario, podrá Iniciar Sesión y acceder a su Banco de Imágenes donde podrá subir
           imágenes que se guardarán en un sitio en la nube. También podrá ver las imágenes guardadas y eliminarlas si así lo desea.
           <br><br>
           Para el desarrollo de esta aplicación se uso:
-          <ul class="recursos">
-            <li>Editor: Visual Studio Code</li>
-            <li>Lenguages: HTML, PHP, JavaScript y CSS</li>
-            <li>Framework: Laravel</li>
-            <li>Base de Datos: PostgreSQL</li>
-            <li>Deploy en: Railway.app</li>
-            <li>Banco de imágenes: imgbb.com</li>
-          </ul>
+        <ul class="recursos">
+          <li>Editor: Visual Studio Code</li>
+          <li>Lenguages: HTML, PHP, JavaScript y CSS</li>
+          <li>Framework: Laravel</li>
+          <li>Base de Datos: PostgreSQL</li>
+          <li>Deploy en: Railway.app</li>
+          <li>Banco de imágenes: imgbb.com</li>
+        </ul>
         </P>
       </div>
     </div>

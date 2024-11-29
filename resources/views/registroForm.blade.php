@@ -11,6 +11,7 @@
 
 <body>
   @include('header')
+  
   <main>
     <div class="conteiner">
       <h2>Registro de Usuario</h2>
@@ -40,5 +41,4 @@
 
   @include('footer')
 </body>
-
 </html>

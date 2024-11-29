@@ -6,7 +6,7 @@
           <p><strong>JM</strong><span class="software">SOFTWARE</span></p>
         </li>
       </div>
-      <div>
+      <div class="opciones-menu">
         @if(session('name'))
           <li class="menu-item hidden"><a href="#">Usuario: <strong>{{ session('name') }}</strong></a></li>
           <li class="menu-item hidden"><a href="/logout">Cerrar Sesión</a></li>
