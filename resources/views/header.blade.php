@@ -3,7 +3,7 @@
     <ul>
       <div>
         <li class="menu-item hidden logo-js">
-          <p><strong>JM</strong><span class="software">SOFTWARE </span><span class="version">ver1.2.2</span>
+          <p><strong>JM</strong><span class="software">SOFTWARE </span><span class="version">ver1.2.5</span>
           </p>
         </li>
       </div>
