@@ -40,7 +40,7 @@ class ImageController extends Controller
     if ($image && $image->isValid()) {
 
       // Verificar si el tamaño de la imagen es mayor a 20MB (20MB = 32 * 1024 * 1024 = 33554432 bytes)
-      if ($image->getSize() > 20971520) {
+      if ($image->getSize() > 1048576) {
         return redirect()->back()->with('error', 'La imagen excede el tamaño máximo permitido de 20MB.');
       }
 

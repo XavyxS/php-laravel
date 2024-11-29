@@ -17,7 +17,7 @@
       </h1>
       <h2>Desarrollando el Software del presente y del futuro</h2>
       <div class="presentacion">
-        <P>Esta aplicación es la Actividad Final de la materia <strong>Lenguage de Programación Backend</strong>
+        <P>Esta aplicación es el <strong>Producto Integrador</strong> de la materia <strong>Lenguage de Programación Backend</strong>
           del Tercer Semestre de la Carrera: <strong>Desarrollo de Sistemas Web. </strong>
           <br><br>
           Esta aplicación es un <strong> Banco de Imágenes individuales</strong> para cada usuario. La App pide el registro
